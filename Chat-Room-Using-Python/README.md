@@ -1,4 +1,4 @@
-# chat-room-using-python
+# Chat-Room-Using-Python
 A very simple Python chat server.
 
 The code consists of 2 python scripts. First is the “server” and the other is the “client”. The “server” does the following things:
