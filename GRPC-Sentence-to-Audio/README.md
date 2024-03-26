@@ -27,5 +27,5 @@ The server implements the ConvertTextToAudio method, converting the received tex
 
 Ensure you have Python and pip installed on your system. Install the required packages:
 
-'''sh  
+''' sh  
 pip install requirements.txt
