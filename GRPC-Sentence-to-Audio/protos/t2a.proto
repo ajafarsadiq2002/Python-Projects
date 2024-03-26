@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package t2a;
+
+// The request containing the sentence to be converted to audio.
+message TextToAudioRequest {
+  string sentence = 1; // The sentence to convert.
+}
+
+// The response with the audio file's URL or binary data.
+message TextToAudioResponse {
+  string audioFileUrl = 1; // URL to access the converted audio.
+}
+
+service TextToAudioService {
+  rpc ConvertTextToAudio(TextToAudioRequest) returns (TextToAudioResponse);   
+}
