@@ -29,3 +29,30 @@ Ensure you have Python and pip installed on your system. Install the required pa
 
 ```sh  
 pip install requirements.txt
+```
+
+# Generating gRPC Code
+First, generate the Python gRPC code from your .proto file:
+
+```sh  
+pip python -m grpc_tools.protoc -I proto --python_out=. --grpc_python_out=. t2a.proto
+```
+
+This command generates t2a_pb2.py and t2a_pb2_grpc.py, which contain the classes for the messages and service definitions.
+
+# Running the Server
+Execute the server script to start listening for requests:
+
+```sh
+python text_to_audio_server.py
+```
+The server will start and listen on localhost:50051, ready to convert text to audio.
+
+# Using the Client
+Run the client script to send a request to the server:
+
+```sh
+python text_to_audio_client.py
+```
+
+Enter the sentence you wish to convert when prompted. The client sends the request to the server, which processes the text and returns a URL to the generated audio file. The client then prints this URL to the console.
