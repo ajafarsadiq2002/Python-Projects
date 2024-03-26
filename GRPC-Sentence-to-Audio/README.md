@@ -11,3 +11,21 @@ In this project, we leverage gRPC to build a text-to-audio conversion service. T
 Client: Sends a sentence as text to the server.
 
 Server: Converts the text into speech using Google's Text-to-Speech (gTTS) library and returns a URL to access the generated audio file.
+
+# How gRPC is Used
+
+gRPC facilitates the communication between the client and server components of our text-to-audio conversion service. We define our service methods and messages using Protocol Buffers, which allows for efficient, language-agnostic serialization of data.
+
+The service definition includes a ConvertTextToAudio RPC method, encapsulating the request and response message types.
+
+The client utilizes a stub to call the ConvertTextToAudio method on the server, sending text and receiving an audio file URL in response.
+
+The server implements the ConvertTextToAudio method, converting the received text into audio and providing the URL to the generated audio file.
+
+# Setup and Running the Service
+# Prerequisites
+
+Ensure you have Python and pip installed on your system. Install the required packages:
+
+'''sh  
+pip install requirements.txt
